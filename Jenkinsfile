@@ -13,6 +13,10 @@ pipeline {
 		    steps{
 		      echo "Building...${BUILD_NUMBER}"
                       echo "Building completed"
+			    post{
+                     always{
+                       junit 'test-reports/*.xml'
+                         }
 		    }
 		  }
                   stage('Test'){
@@ -20,8 +24,8 @@ pipeline {
                       
                     steps {
                       
-                     /* bat 'pip install Flask'
-                      bat 'pip install xmlrunner'*/
+                      bat 'pip install Flask'
+                      bat 'pip install xmlrunner'
                       bat 'python3 test.py'
                     }
                     post{
