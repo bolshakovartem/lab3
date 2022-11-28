@@ -15,11 +15,9 @@ pipeline {
                       echo "Building completed"
 		    }
 		  }
-                  stage('Test'){
-                    agent{ docker {image 'alpine'
-                              args '-u=\"root\"'
-                             }
-                      }
+                 /* stage('Test'){
+                    agent any
+                      
                     steps {
                       sh 'apk add --update python3 py-pip'
                       sh 'pip install Flask'
@@ -37,6 +35,6 @@ pipeline {
                        echo "Oooppss!!! Tests failed!"
                      }
                     }
-                  }  
+                  }  */
                 }
               }
