@@ -22,7 +22,7 @@ pipeline {
                       
                       sh 'pip install Flask'
                       sh 'pip install xmlrunner'
-                      sh 'python3 test.py'
+                      sh 'python3 D:\lab3\test.py'
                     }
                     post{
                      always{
