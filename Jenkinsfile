@@ -22,7 +22,7 @@ pipeline {
                       
                       bat 'pip install Flask'
                       bat 'pip install xmlrunner'
-                      bat 'python3 test.py'
+                      bat 'python test.py'
                     }
                     post{
                      /*always{
