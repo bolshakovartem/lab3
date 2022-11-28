@@ -20,8 +20,8 @@ pipeline {
                       
                     steps {
                       
-                      bat 'pip install Flask'
-                      bat 'pip install xmlrunner'
+                     /* bat 'pip install Flask'
+                      bat 'pip install xmlrunner'*/
                       bat 'python3 test.py'
                     }
                     post{
