@@ -20,14 +20,14 @@ pipeline {
                       
                     steps {
                       
-                      /*bat 'pip install Flask'
-                      bat 'pip install xmlrunner'*/
+                      bat 'pip install Flask'
+                      bat 'pip install xmlrunner'
                       bat 'python test.py'
                     }
                     post{
-                     /*always{
+                     always{
                        junit 'test-reports/*.xml'
-                         }*/
+                         }
                      success{
                        echo "Application testing successfully completed "
                      }
