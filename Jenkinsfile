@@ -13,11 +13,11 @@ pipeline {
 		    steps{
 		      echo "Building...${BUILD_NUMBER}"
                       echo "Building completed"
-			    post{
-                     always{
+			    
+                      always{
                        junit 'test-reports/*.xml'
                          }
-		    }
+		    
 		  }
                   stage('Test'){
                     agent any
@@ -42,4 +42,3 @@ pipeline {
                   }  
                 }
               }
-}
