@@ -18,12 +18,12 @@ pipeline {
                   stage('Test'){
                     agent any
                       
-                    steps {
+                    /*steps {
                       
                       sh 'pip install Flask'
                       sh 'pip install xmlrunner'
                       sh 'python3 test.py'
-                    }
+                    }*/
                     post{
                      always{
                        junit 'test-reports/*.xml'
