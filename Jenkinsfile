@@ -15,11 +15,11 @@ pipeline {
                       echo "Building completed"
 		    }
 		  }
-                 /* stage('Test'){
+                  stage('Test'){
                     agent any
                       
                     steps {
-                      sh 'apk add --update python3 py-pip'
+                      
                       sh 'pip install Flask'
                       sh 'pip install xmlrunner'
                       sh 'python3 test.py'
@@ -35,6 +35,6 @@ pipeline {
                        echo "Oooppss!!! Tests failed!"
                      }
                     }
-                  }  */
+                  }  
                 }
               }
