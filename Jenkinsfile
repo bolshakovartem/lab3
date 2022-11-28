@@ -20,9 +20,9 @@ pipeline {
                       
                     steps {
                       
-                      ws 'pip install Flask'
-                      ws 'pip install xmlrunner'
-                      ws 'python3 test.py'
+                      node 'pip install Flask'
+                      node 'pip install xmlrunner'
+                      node 'python3 test.py'
                     }
                     post{
                      always{
