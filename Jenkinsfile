@@ -13,7 +13,7 @@ pipeline {
 		    steps{
 		      echo "Building...${BUILD_NUMBER}"
                       echo "Building completed"
-			    	    
+		    }	    	    
 		  }
                   stage('Test'){
                     agent any
