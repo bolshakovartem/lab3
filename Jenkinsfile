@@ -25,9 +25,9 @@ pipeline {
                       bat 'python test.py'
                     }
                     post{
-                     /*always{
+                     always{
                        junit 'test-reports/*.xml'
-                         }*/
+                         }
                      success{
                        echo "Application testing successfully completed "
                      }
