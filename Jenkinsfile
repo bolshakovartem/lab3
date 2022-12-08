@@ -17,14 +17,14 @@ pipeline {
 		  }
                   stage('Test'){
 			  agent { docker { image 'alpine'
-					  args '-u=\"root\"'
-					 }
-				}   
+				    args '-u=\"root\"'
+				   }
+			    }   
                     steps {
-                      
+                      sh 'apk add --update python3 py-pip'
                       sh 'pip install Flask'
                       sh 'pip install xmlrunner'
-                      sh 'python test.py'
+                      sh 'python3 test.py'
                     }
                     post{
                      always{
