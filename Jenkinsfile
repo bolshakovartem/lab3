@@ -16,13 +16,15 @@ pipeline {
 		    }	    	    
 		  }
                   stage('Test'){
-                    agent any
-                      
+			  agent { docker { image 'alpine' 
+					  args '-u=\"root\"'
+					 }
+				}   
                     steps {
                       
-                      bat 'pip install Flask'
-                      bat 'pip install xmlrunner'
-                      bat 'python test.py'
+                      sh 'pip install Flask'
+                      sh 'pip install xmlrunner'
+                      sh 'python test.py'
                     }
                     post{
                      always{
