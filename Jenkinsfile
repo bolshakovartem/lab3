@@ -17,6 +17,7 @@ pipeline {
 		  }
                   stage('Test'){
 			  agent { docker { image 'jenkins/jenkins'
+					  args '-u=\"root\"'
 					 }
 				}   
                     steps {
